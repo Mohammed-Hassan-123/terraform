@@ -9,12 +9,12 @@ terraform {
 
 provider "proxmox" {
   endpoint  = "https://192.168.100.9:8006/"
-  api_token = "terraform@pve!terraform-token=5961539d-c0a8-40e3-95c4-3c163424f2bd"
+  api_token = var.pm_api_token
   insecure  = true
 
   ssh {
     agent    = false
     username = "root"
-    password = "Dragon+Power+008"
+    password = var.pm_password
   }
 }
