@@ -1,0 +1,29 @@
+terraform {
+  required_providers {
+    proxmox = {
+      source  = "bpg/proxmox"
+      version = "0.46.4"
+    }
+  }
+
+  backend "http" {
+    address        = "https://gitlab.com/api/v4/projects/82092590/terraform/state/week5"
+    lock_address   = "https://gitlab.com/api/v4/projects/82092590/terraform/state/week5/lock"
+    unlock_address = "https://gitlab.com/api/v4/projects/82092590/terraform/state/week5/lock"
+    lock_method    = "POST"
+    unlock_method  = "DELETE"
+    retry_wait_min = 5
+  }
+}
+
+provider "proxmox" {
+  endpoint  = "https://192.168.100.9:8006/"
+  api_token = var.pm_api_token
+  insecure  = true
+
+  ssh {
+    agent    = false
+    username = "root"
+    password = var.pm_password
+  }
+}
