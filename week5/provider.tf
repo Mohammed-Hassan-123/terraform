@@ -12,5 +12,10 @@ provider "proxmox" {
   api_token = var.pm_api_token
   insecure  = true
 
+  ssh {
+    agent    = false
+    username = var.pm_ssh_username
+    password = var.pm_ssh_password
+  }
 
 }

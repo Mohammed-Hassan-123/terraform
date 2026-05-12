@@ -1,0 +1,331 @@
+{
+  "version": 4,
+  "terraform_version": "1.15.2",
+  "serial": 26,
+  "lineage": "e6134e6d-a441-1122-fe2c-623f81a70d42",
+  "outputs": {
+    "inventory_file": {
+      "value": null,
+      "type": "string"
+    },
+    "vm_ips": {
+      "value": {
+        "slavefour": null,
+        "slavethree": null
+      },
+      "type": [
+        "object",
+        {
+          "slavefour": "string",
+          "slavethree": "string"
+        }
+      ]
+    },
+    "vm_password": {
+      "value": "12345678",
+      "type": "string",
+      "sensitive": true
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "proxmox_virtual_environment_vm",
+      "name": "slaveone",
+      "provider": "provider[\"registry.terraform.io/bpg/proxmox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acpi": true,
+            "agent": [
+              {
+                "enabled": true,
+                "timeout": "15m",
+                "trim": false,
+                "type": "virtio"
+              }
+            ],
+            "audio_device": [],
+            "bios": "seabios",
+            "boot_order": null,
+            "cdrom": [],
+            "clone": [],
+            "cpu": [
+              {
+                "architecture": "x86_64",
+                "cores": 1,
+                "flags": [],
+                "hotplugged": 0,
+                "limit": 0,
+                "numa": false,
+                "sockets": 1,
+                "type": "x86-64-v2-AES",
+                "units": 1024
+              }
+            ],
+            "description": "",
+            "disk": [
+              {
+                "cache": "none",
+                "datastore_id": "local-lvm",
+                "discard": "ignore",
+                "file_format": "raw",
+                "file_id": "",
+                "interface": "scsi0",
+                "iothread": true,
+                "path_in_datastore": "vm-101-disk-0",
+                "size": 20,
+                "speed": [],
+                "ssd": false
+              }
+            ],
+            "efi_disk": [],
+            "hook_script_file_id": null,
+            "hostpci": [],
+            "id": "101",
+            "initialization": [],
+            "ipv4_addresses": [
+              [
+                "127.0.0.1"
+              ],
+              [
+                "192.168.100.10"
+              ]
+            ],
+            "ipv6_addresses": [
+              [
+                "::1"
+              ],
+              [
+                "fe80::be24:11ff:fe42:e9f1"
+              ]
+            ],
+            "keyboard_layout": "en-us",
+            "kvm_arguments": "",
+            "mac_addresses": [
+              "00:00:00:00:00:00",
+              "BC:24:11:42:E9:F1"
+            ],
+            "machine": "",
+            "memory": [
+              {
+                "dedicated": 1024,
+                "floating": 0,
+                "shared": 0
+              }
+            ],
+            "migrate": null,
+            "name": "slaveone",
+            "network_device": [
+              {
+                "bridge": "vmbr0",
+                "enabled": true,
+                "firewall": true,
+                "mac_address": "BC:24:11:42:E9:F1",
+                "model": "virtio",
+                "mtu": 0,
+                "queues": 0,
+                "rate_limit": 0,
+                "vlan_id": 0
+              }
+            ],
+            "network_interface_names": [
+              "lo",
+              "ens18"
+            ],
+            "node_name": "hassan",
+            "on_boot": null,
+            "operating_system": [
+              {
+                "type": "l26"
+              }
+            ],
+            "pool_id": null,
+            "reboot": null,
+            "scsi_hardware": "virtio-scsi-single",
+            "serial_device": [],
+            "smbios": [],
+            "started": true,
+            "startup": [],
+            "stop_on_destroy": null,
+            "tablet_device": true,
+            "tags": [],
+            "template": false,
+            "timeout_clone": null,
+            "timeout_create": null,
+            "timeout_migrate": null,
+            "timeout_move_disk": null,
+            "timeout_reboot": null,
+            "timeout_shutdown_vm": null,
+            "timeout_start_vm": null,
+            "timeout_stop_vm": null,
+            "tpm_state": [],
+            "usb": [],
+            "vga": [
+              {
+                "enabled": true,
+                "memory": 0,
+                "type": ""
+              }
+            ],
+            "vm_id": 101
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "proxmox_virtual_environment_vm",
+      "name": "slavetwo",
+      "provider": "provider[\"registry.terraform.io/bpg/proxmox\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acpi": true,
+            "agent": [
+              {
+                "enabled": true,
+                "timeout": "15m",
+                "trim": false,
+                "type": "virtio"
+              }
+            ],
+            "audio_device": [],
+            "bios": "seabios",
+            "boot_order": null,
+            "cdrom": [],
+            "clone": [],
+            "cpu": [
+              {
+                "architecture": "x86_64",
+                "cores": 1,
+                "flags": [],
+                "hotplugged": 0,
+                "limit": 0,
+                "numa": false,
+                "sockets": 1,
+                "type": "x86-64-v2-AES",
+                "units": 1024
+              }
+            ],
+            "description": "",
+            "disk": [
+              {
+                "cache": "none",
+                "datastore_id": "local-lvm",
+                "discard": "ignore",
+                "file_format": "raw",
+                "file_id": "",
+                "interface": "scsi0",
+                "iothread": true,
+                "path_in_datastore": "vm-102-disk-0",
+                "size": 20,
+                "speed": [],
+                "ssd": false
+              }
+            ],
+            "efi_disk": [],
+            "hook_script_file_id": null,
+            "hostpci": [],
+            "id": "102",
+            "initialization": [],
+            "ipv4_addresses": [
+              [
+                "127.0.0.1"
+              ],
+              [
+                "192.168.100.12"
+              ]
+            ],
+            "ipv6_addresses": [
+              [
+                "::1"
+              ],
+              [
+                "fe80::be24:11ff:fe20:5dde"
+              ]
+            ],
+            "keyboard_layout": "en-us",
+            "kvm_arguments": "",
+            "mac_addresses": [
+              "00:00:00:00:00:00",
+              "BC:24:11:20:5D:DE"
+            ],
+            "machine": "",
+            "memory": [
+              {
+                "dedicated": 1024,
+                "floating": 0,
+                "shared": 0
+              }
+            ],
+            "migrate": null,
+            "name": "slavetwo",
+            "network_device": [
+              {
+                "bridge": "vmbr0",
+                "enabled": true,
+                "firewall": true,
+                "mac_address": "BC:24:11:20:5D:DE",
+                "model": "virtio",
+                "mtu": 0,
+                "queues": 0,
+                "rate_limit": 0,
+                "vlan_id": 0
+              }
+            ],
+            "network_interface_names": [
+              "lo",
+              "ens18"
+            ],
+            "node_name": "hassan",
+            "on_boot": null,
+            "operating_system": [
+              {
+                "type": "l26"
+              }
+            ],
+            "pool_id": null,
+            "reboot": null,
+            "scsi_hardware": "virtio-scsi-single",
+            "serial_device": [],
+            "smbios": [],
+            "started": true,
+            "startup": [],
+            "stop_on_destroy": null,
+            "tablet_device": true,
+            "tags": [],
+            "template": false,
+            "timeout_clone": null,
+            "timeout_create": null,
+            "timeout_migrate": null,
+            "timeout_move_disk": null,
+            "timeout_reboot": null,
+            "timeout_shutdown_vm": null,
+            "timeout_start_vm": null,
+            "timeout_stop_vm": null,
+            "tpm_state": [],
+            "usb": [],
+            "vga": [
+              {
+                "enabled": true,
+                "memory": 0,
+                "type": ""
+              }
+            ],
+            "vm_id": 102
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjAifQ=="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
